@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Schools Marks</h1>
+    <input type="number" id="marks" placeholder="enter the marks">
+    <button Onclick="resultsheet()">Check</button>
+    <p id="results"></p>
+    <script>
+      function resultsheet () {
+        const score = document.getElementById("marks").value
+        let grade;
+        if(score>=90){
+            grade = "A";
+        }
+        else if(score>=80){
+            grade = "B";
+        }
+        else if(score>=70){
+            grade = "C";
+        }
+        else if(score>=60){
+            grade = "D";
+        }
+        else{
+            grade = "fail"
+        }
+             document.getElementById("results").textContent = grade;
+     }
+
+    </script>
+</body>
+</html>
